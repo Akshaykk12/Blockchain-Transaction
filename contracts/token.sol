@@ -1,3 +1,4 @@
+//SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.5.0 <0.9.0;
 
 contract Token{
@@ -10,7 +11,7 @@ contract Token{
     mapping(address => uint) balances;          //This will tell how many tokens does that account has
 
     constructor(){
-        balances[msg.sender] = totalSupply ;
+        balances[msg.sender] = totalsupply ;
         owner = msg.sender;
     }
 
