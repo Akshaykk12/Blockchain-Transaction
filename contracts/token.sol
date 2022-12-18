@@ -4,14 +4,14 @@ pragma solidity >=0.5.0 <0.9.0;
 contract Token{
     string public name = "Psy Token" ;
     string public symbol = "PSY";
-    uint public totalsupply = 10000;
+    uint public totalSupply = 10000;
 
     address public owner;
 
     mapping(address => uint) balances;          //This will tell how many tokens does that account has
 
     constructor(){
-        balances[msg.sender] = totalsupply ;
+        balances[msg.sender] = totalSupply ;
         owner = msg.sender;
     }
 
@@ -20,7 +20,7 @@ contract Token{
         balances[msg.sender] -= amount;
         balances[to] += amount;
     }
-    function balanceof(address account) external view returns (uint){
+    function balanceOf(address account) external view returns (uint){
         return balances[account];
     }
 }
